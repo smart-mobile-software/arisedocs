@@ -12,7 +12,9 @@ Installation steps
 1. Add the Arise library to your project
 ----------------------------------------
 
-First, download the Arise library jar file and drag it inside your project's /libs/ folder.
+First, download the `Arise library jar file`_ and drag it inside your project's /libs/ folder.
+
+.. _`Arise library jar file`: https://s3.amazonaws.com/ariseio/Arise-Android-2.2.jar
 
 2. Add permissions
 -------------------

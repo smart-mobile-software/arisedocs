@@ -27,7 +27,7 @@ Getting Started
 
 If you do not have an account yet, register on the dashboard_. The dashboard is your tool to configure your experiment variation.
 
-.. _dashboard: http://staging.arise.io/
+.. _dashboard: http://beta.arise.io/
 
 2. Configure your variation
 ---------------------------
