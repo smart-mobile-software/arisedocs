@@ -1,2 +1,4 @@
 .idea/
 virtualenv1/
+.DS_Store
+build/
