@@ -1,0 +1,120 @@
+.. meta::
+   :description: Android A/B testing client setup
+
+Arise Android SDK
+*****************
+
+This documentation will help you to install the Arise Android client in your application.
+
+Installation steps
+==================
+
+1. Add the Arise library to your project
+----------------------------------------
+
+First, download the Arise library jar file and drag it inside your project's /libs/ folder.
+
+2. Add permissions
+-------------------
+
+In your project, right click on AndroidManifest.xml Click on Open With/Android Common XML Editor. Add after the <uses-sdk .... /> tag:
+
+.. code-block:: xml
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+3. Initialize the framework
+---------------------------
+
+In the onCreate function of your main activity, you need to initialize the framework:
+
+.. code-block:: java
+
+    // Initialize the arise library
+    String authKey = "9c51b5e8f06ebd26728f29954365098f052c68c8";
+    Arise.initialize(getApplicationContext(), authKey);
+
+Replace the value of authKey by your own key. You can find in your dashboard.
+
+4. Get the experiment value
+---------------------------
+
+When you plan to run the experiment, you will need to call the getVariationWithListener to get the experiment data:
+
+.. code-block:: java
+
+    // Get and setup the variation
+    ABTest.getVariationWithListener(new VariationListener() {
+    	@Override
+    	public void onVariationAvailable(String value) {
+    		final String buyMessage = value;
+    	}
+    });
+
+5. Record events
+----------------
+
+Now that you have setup your application for testing, you will need to record views and conversion events.
+Record a view:
+
+.. code-block:: java
+
+	ABTest.recordView();
+
+Record a conversion:
+
+.. code-block:: java
+
+	ABTest.recordConversion();
+
+
+Full code example
+==================
+
+.. code-block:: java
+
+    package com.example.shoestore;
+
+    import io.arise.ABTest;
+    import io.arise.Arise;
+    import io.arise.VariationListener;
+    import android.os.Bundle;
+    import android.app.Activity;
+
+    public class MainActivity extends Activity {
+
+    	@Override
+    	protected void onCreate(Bundle savedInstanceState) {
+    		super.onCreate(savedInstanceState);
+    		setContentView(R.layout.activity_main);
+
+    		// Initialize the arise library
+    		String authKey = "9c51b5e8f06ebd26728f29954365098f052c68c8";
+    		Arise.initialize(getApplicationContext(), authKey);
+
+    		// Get and setup the variation
+    		ABTest.getVariationWithListener(new VariationListener() {
+    			@Override
+    			public void onVariationAvailable(String value) {
+    				// Change the button label
+    				final String buyMessage = value;
+    				// Use the buyMessage to customize our application
+    				// ...
+
+    			}
+    		});
+
+    	}
+
+    	private void onLoadPurchasePage(){
+    		// the user is viewing the item purchase page
+    		// record a view event
+    		ABTest.recordView();
+    	}
+
+    	private void onPurchaseCompleted(){
+    		// the user has bought the item
+    		// record a conversion event
+    		ABTest.recordConversion();
+    	}
+    }
