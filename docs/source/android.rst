@@ -118,3 +118,8 @@ Full code example
     		ABTest.recordConversion();
     	}
     }
+
+Notes
+=====
+
+The Arise Android SDK supports Android 2.3.3 (API level 10) and later.
