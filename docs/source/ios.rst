@@ -12,7 +12,7 @@ Installation steps
 1. Add the Arise library to your project
 ----------------------------------------
 
-First, download the `Arise SDK for iOS`_. Unzip it and drag and drag it inside your project's /libs/ folder. Ensure that you select ‘Copy items into the destination group’s folder’ when the dialogue box appears.
+First, download the `Arise SDK for iOS`_. Unzip it and drag it inside your project's Frameworks folder. Ensure that you select ‘Copy items into the destination group’s folder’ when the dialogue box appears.
 
 .. _`Arise SDK for iOS`: https://s3.amazonaws.com/ariseio/Arise-iOS-2.2.zip
 
@@ -35,7 +35,7 @@ Add the following line in your AppDelegate.h:
 
 .. code-block:: obj-c
 
-    #import <Arise/AriseAB.h>
+    #import <Arise/Arise.h>
 
 Add the following line under application:didFinishLaunchingWithOptions of your AppDelegate.m file to initialize the framework:
 
@@ -56,11 +56,11 @@ You can request a variation value using the getVariation method in one of your .
         upgradeButton.title = experimentValue;
     }];
 
-Do not forget to include the Arise SDK in your header file:
+Do not forget to import the Arise SDK in your header file:
 
 .. code-block:: obj-c
 
-    #import <Arise/AriseAB.h>
+    #import <Arise/Arise.h>
 
 
 5. Record events
@@ -101,7 +101,7 @@ Full code example
         UIBarButtonItem *purchaseButton = [[UIBarButtonItem alloc] initWithTitle:@"Buy"
                                                                         style:UIBarButtonItemStyleBordered
                                                                        target:self
-                                                                       action:@selector(login:)];
+                                                                       action:@selector(onPurchase:)];
 
         self.navigationItem.rightBarButtonItem = purchaseButton;
 
@@ -128,13 +128,6 @@ Full code example
         // Dispose of any resources that can be recreated.
     }
 
-    - (IBAction)login:(id)sender
-    {
-        /**
-         User pressed the button : count a successful experiment, or conversion.
-         */
-        [ABTest recordConversion];
-    }
 
 To run the test in the example you need to embed in the navigation controller to the project.
 Select "Mainstoryboard.storyboard" > Editor > Embed In > Navigation Controller.
