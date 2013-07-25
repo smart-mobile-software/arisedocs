@@ -97,28 +97,28 @@ Full code example
     {
         [super viewDidLoad];
 
-        // Create a button with a default value
-        UIBarButtonItem *purchaseButton = [[UIBarButtonItem alloc] initWithTitle:@"Buy"
-                                                                        style:UIBarButtonItemStyleBordered
-                                                                       target:self
-                                                                       action:@selector(onPurchase:)];
-
-        self.navigationItem.rightBarButtonItem = purchaseButton;
-
-        [ABTest getVariation:^(NSString *experimentValue){
+        // Get and setup the variation
+        [ABTest getVariation:^(NSString *value){
+            // Use the variation value to customize our application
+            // ...
+            
+            // For example :
             // Change the title of the purchase button
-            purchaseButton.title = experimentValue;
+            purchaseButton.title = value;
         }];
     }
 
     - (void)onLoadPurchasePage
     {
+    	// the user is viewing the item purchase page
+        // record a view event
         [ABTest recordView];
     }
 
     - (IBAction)onPurchase:(id)sender
     {
-        // User clicked on the purchase button : count a successful experiment, or conversion.
+        // the user has bought the item
+        // record a conversion event
         [ABTest recordConversion];
     }
 
@@ -127,10 +127,6 @@ Full code example
         [super didReceiveMemoryWarning];
         // Dispose of any resources that can be recreated.
     }
-
-
-To run the test in the example you need to embed in the navigation controller to the project.
-Select "Mainstoryboard.storyboard" > Editor > Embed In > Navigation Controller.
 
 Notes
 =====
