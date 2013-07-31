@@ -41,12 +41,12 @@ Replace the value of authKey by your own key. You can find in your dashboard.
 4. Get the experiment value
 ---------------------------
 
-When you plan to run the experiment, you will need to call the getVariationWithListener to get the experiment data:
+When you plan to run the experiment, you will need to call the getVariationWithListener with the experiment name (same as the one displayed in your dashboard) to get the experiment data:
 
 .. code-block:: java
 
     // Get and setup the variation
-    ABTest.getVariationWithListener(new VariationListener() {
+    ABTest.getVariationWithListener("Experiment1", VariationListener() {
     	@Override
     	public void onVariationAvailable(String value) {
     		final String buyMessage = value;
@@ -56,18 +56,19 @@ When you plan to run the experiment, you will need to call the getVariationWithL
 5. Record events
 ----------------
 
-Now that you have setup your application for testing, you will need to record views and conversion events.
+Now that you have setup your application for testing, you will need to record views and conversion events. You need to pass the experiment name as a parameter to associate the events with an experiment.
+
 Record a view:
 
 .. code-block:: java
 
-	ABTest.recordView();
+	ABTest.recordView("Experiment1");
 
 Record a conversion:
 
 .. code-block:: java
 
-	ABTest.recordConversion();
+	ABTest.recordConversion("Experiment1");
 
 
 Full code example
@@ -95,7 +96,7 @@ Full code example
     		Arise.initialize(getApplicationContext(), authKey);
 
     		// Get and setup the variation
-    		ABTest.getVariationWithListener(new VariationListener() {
+    		ABTest.getVariationWithListener("Experiment1", new VariationListener() {
     			@Override
     			public void onVariationAvailable(String value) {
     				// Change the button label
@@ -111,13 +112,13 @@ Full code example
     	private void onLoadPurchasePage(){
     		// the user is viewing the item purchase page
     		// record a view event
-    		ABTest.recordView();
+    		ABTest.recordView("Experiment1");
     	}
 
     	private void onPurchaseCompleted(){
     		// the user has bought the item
     		// record a conversion event
-    		ABTest.recordConversion();
+    		ABTest.recordConversion("Experiment1");
     	}
     }
 
