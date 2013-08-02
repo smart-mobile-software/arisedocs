@@ -12,7 +12,7 @@ Installation steps
 1. Add the Arise library to your project
 ----------------------------------------
 
-First, download the `Arise SDK for iOS`_. Unzip it and drag it inside your project's Frameworks folder. Ensure that you select ‘Copy items into the destination group’s folder’ when the dialogue box appears.
+First, download the `Arise SDK for iOS`_. Unzip it and drag it inside your project's Frameworks folder in XCode. Ensure that you select ‘Copy items into the destination group’s folder’ when the dialogue box appears.
 
 .. _`Arise SDK for iOS`: https://s3.amazonaws.com/ariseio/Arise-iOS-2.2.zip
 
