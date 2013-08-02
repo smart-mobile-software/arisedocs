@@ -48,12 +48,12 @@ Replace the value of the key by your own key. You can find it in your dashboard.
 4. Get the experiment value
 ---------------------------
 
-You can request a variation value using the getVariation method in one of your .m file:
+You can request a variation value using the getVariation: method with the experiment name (same as the one displayed in your dashboard) :
 
 .. code-block:: obj-c
 
-    [ABTest getVariation:^(NSString *experimentValue){
-        upgradeButton.title = experimentValue;
+    [ABTest getVariation:@"Experiment1" data:^(NSString *value){
+        purchaseButton.title = value;
     }];
 
 Do not forget to import the Arise SDK in your header file:
@@ -66,18 +66,19 @@ Do not forget to import the Arise SDK in your header file:
 5. Record events
 ----------------
 
-Now that you have setup your application for testing, you will need to record views and conversion events.
+Now that you have setup your application for testing, you will need to record views and conversion events. You need to pass the experiment name as a parameter to associate the events with an experiment.
+
 Record a view:
 
 .. code-block:: obj-c
 
-	[ABTest recordView];
+	[ABTest recordView:@"Experiment1"];
 
 Record a conversion:
 
 .. code-block:: obj-c
 
-	[ABTest recordConversion];
+	[ABTest recordConversion:@"Experiment1"];
 
 
 Full code example
@@ -98,7 +99,7 @@ Full code example
         [super viewDidLoad];
 
         // Get and setup the variation
-        [ABTest getVariation:^(NSString *value){
+        [ABTest getVariation:@"Experiment1" data:^(NSString *value){
             // Use the variation value to customize our application
             // ...
             
@@ -112,14 +113,14 @@ Full code example
     {
     	// the user is viewing the item purchase page
         // record a view event
-        [ABTest recordView];
+        [ABTest recordView:@"Experiment1"];
     }
 
     - (IBAction)onPurchase:(id)sender
     {
         // the user has bought the item
         // record a conversion event
-        [ABTest recordConversion];
+        [ABTest recordConversion:@"Experiment1"];
     }
 
     - (void)didReceiveMemoryWarning
