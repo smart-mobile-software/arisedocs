@@ -49,10 +49,11 @@ Replace the value of the key by your own key. You can find it in your dashboard.
 ---------------------------
 
 You can request a variation value using the getVariation: method with the experiment name (same as the one displayed in your dashboard) :
+You can also set a default value in case of no connection from the server.
 
 .. code-block:: obj-c
 
-    [ABTest getVariation:@"Experiment1" data:^(NSString *value){
+    [ABTest getVariation:@"Experiment1" defaultValue:@"default value" data:^(NSString *value){
         purchaseButton.title = value;
     }];
 
@@ -99,7 +100,7 @@ Full code example
         [super viewDidLoad];
 
         // Get and setup the variation
-        [ABTest getVariation:@"Experiment1" data:^(NSString *value){
+        [ABTest getVariation:@"Experiment1" defaultValue:@"default value" data:^(NSString *value){
             // Use the variation value to customize our application
             // ...
             
