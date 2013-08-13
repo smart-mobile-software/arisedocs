@@ -48,7 +48,7 @@ Replace the value of the key by your own key. You can find it in your dashboard.
 4. Get the experiment value
 ---------------------------
 
-You can request a variation value using the getVariation: method with the experiment name (same as the one displayed in your dashboard) :
+You can request a variation value using the getVariation: method with the experiment name (same as the one displayed in your dashboard).
 You can also set a default value in case of no connection from the server.
 
 .. code-block:: obj-c
