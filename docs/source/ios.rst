@@ -132,4 +132,4 @@ Full code example
 Notes
 =====
 
-The Arise iOS SDK supports iOS 6 and later.
+The Arise iOS SDK supports iOS 5.0 and later.
