@@ -41,12 +41,13 @@ Replace the value of authKey by your own key. You can find in your dashboard.
 4. Get the experiment value
 ---------------------------
 
-When you plan to run the experiment, you will need to call the getVariationWithListener with the experiment name (same as the one displayed in your dashboard) to get the experiment data:
+When you plan to run the experiment, you will need to call the getVariationWithListener with the experiment name (same as the one displayed in your dashboard) to get the experiment data.
+You can also set a default value in case of no connection from the server.
 
 .. code-block:: java
 
     // Get and setup the variation
-    ABTest.getVariationWithListener("Experiment1", VariationListener() {
+    ABTest.getVariationWithListener("Experiment1", "default value", new VariationListener() {
     	@Override
     	public void onVariationAvailable(String value) {
     		final String buyMessage = value;
@@ -96,7 +97,7 @@ Full code example
     		Arise.initialize(getApplicationContext(), authKey);
 
     		// Get and setup the variation
-    		ABTest.getVariationWithListener("Experiment1", new VariationListener() {
+    		ABTest.getVariationWithListener("Experiment1", "default value", new VariationListener() {
     			@Override
     			public void onVariationAvailable(String value) {
     				// Change the button label
