@@ -82,6 +82,7 @@ Record a conversion:
 
 	[ABTest recordConversion:@"Experiment1"];
 
+Views and conversions events are stored on the device until an internet connection is available. Our framework does work properly even in case of no connectivity.
 
 Full code example
 ==================
