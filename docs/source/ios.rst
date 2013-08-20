@@ -14,7 +14,7 @@ Installation steps
 
 First, download the `Arise SDK for iOS`_. Unzip it and drag it inside your project's Frameworks folder in XCode. Ensure that you select ‘Copy items into the destination group’s folder’ when the dialogue box appears.
 
-.. _`Arise SDK for iOS`: https://s3.amazonaws.com/ariseio/Arise-iOS-2.3.zip
+.. _`Arise SDK for iOS`: https://s3.amazonaws.com/ariseio/Arise-iOS-2.4.zip
 
 2. Add dependencies
 -------------------
@@ -43,17 +43,17 @@ Add the following line under application:didFinishLaunchingWithOptions of your A
 
     [Arise initializeWithKey:@"9c51b5e8f06ebd26728f29954365098f052c68c8"];
 
-Replace the value of the key by your own key. You can find it in your dashboard.
+Replace the value of the key by your own key. You can find it at the top of your dashboard.
 
 4. Get the experiment value
 ---------------------------
 
 You can request a variation value using the getVariation: method with the experiment name (same as the one displayed in your dashboard).
-You can also set a default value in case of no connection from the server.
+You have also to set a default value in case of no connection to the server. "Buy it now" is the default value in the following code snippet.
 
 .. code-block:: obj-c
 
-    [ABTest getVariation:@"Experiment1" defaultValue:@"default value" data:^(NSString *value){
+    [ABTest getVariation:@"Experiment1" defaultValue:@"Buy it now" data:^(NSString *value){
         purchaseButton.title = value;
     }];
 
@@ -63,11 +63,12 @@ Do not forget to import the Arise SDK in your header file:
 
     #import <Arise/Arise.h>
 
+The default value will only be printed if the application has never succeeded to connect to the server. We recommend to set the default value to the same value as your variation A value.
 
 5. Record events
 ----------------
 
-Now that you have setup your application for testing, you will need to record views and conversion events. You need to pass the experiment name as a parameter to associate the events with an experiment.
+Now that you have setup your application for testing, you will need to record views and conversion events. You need to provide the experiment name as a parameter to associate the events with an experiment.
 
 Record a view:
 
@@ -100,7 +101,7 @@ Full code example
         [super viewDidLoad];
 
         // Get and setup the variation
-        [ABTest getVariation:@"Experiment1" defaultValue:@"default value" data:^(NSString *value){
+        [ABTest getVariation:@"Experiment1" defaultValue:@"Buy it now" data:^(NSString *value){
             // Use the variation value to customize our application
             // ...
             

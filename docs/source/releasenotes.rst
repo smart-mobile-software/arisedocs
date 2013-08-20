@@ -4,14 +4,32 @@
 Release notes
 *****************
 
-Version 2.2
+Version 2.4
 ==================
-July 28th 2013
+August 22th 2013
 
-First release of the new Arise platform (2.x). Versions 2.0 and 2.1 were never released to the public.
+Dashboard
+----------
+
+* Adding support up to 7 variations per experiment (A/B/N testing)
+* Stunning performances (no page reload)
+
+iOS
+----
+
+* A default value can be defined
+* Multiple variations support
+* Platform support lowered form iOS 6.0 and up to iOS 5.0 and up.
+
+Android
+--------
+
+* A default value can be defined
+* Multiple variations support
 
 Version 2.3
 ==================
+August 6th 2013
 
 Dashboard
 ----------
@@ -32,3 +50,9 @@ Android
 
 * Less http requests (the registration with the server is now cached)
 * Multiple experiments support
+
+Version 2.2
+==================
+July 28th 2013
+
+First release of the new Arise platform (2.x). Versions 2.0 and 2.1 were never released to the public.

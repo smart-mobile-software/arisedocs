@@ -49,17 +49,18 @@ Variation values will be transmitted to your app. You can experiment:
 * layout and design (position and grouping of content)
 * images
 
-You need to set different values for each variation. We will consider the variation A as the default variation (control).
+You need to set different values for each variation. We will consider the variation A as the default variation (original).
+You will be able to create up to 8 variations. However, you will get more reliable and faster results by testing as few variations as possible.
 
 Distribution
 ++++++++++++
 
-You can set the distribution of your variations. The total of all the variations must always be 100%. You can for example set 70% on the variation A (control) and 30% on the variation B (test). Once your app is deployed, you will be able to view the conversion rate for each variation.
+You can set the distribution of your variations. The total of all the variations must always be 100%. You can for example set 70% on the variation A (original) and 30% on the variation B (test). Once your app is deployed, you will be able to view the conversion rate for each variation.
 
 3. Start your experiment
 ---------------------------
 
-Once you have configured your experiment, you will need to click on the "Start experiment" button. Once an experiment is started, experiment values are not allowed to be modified. However, the distribution can still be modified. Requests from new devices will use the new distribution. Devices that have already an experiment assigned won't change.
+Once you have configured your experiment, you will need to click on the "Start experiment" button. Once an experiment is started, experiment values are not allowed to be modified. You will also not be able to add or remove a variation. However, the distribution can still be modified. Requests from new devices will use the new distribution. Devices that have already an experiment assigned won't change.
 
 4. Install the Arise SDK in your app
 -------------------------------------
@@ -69,10 +70,8 @@ We currently support iOS and Android. Please read the following documentation to
 * :doc:`ios`
 * :doc:`android`
 
-.. _iOS: http://staging.arise.io/
-
 
 5. End your experiment
 -----------------------
 
-Once you have significant results for an experiment, you have the choice between keeping the variation A or using variation B. All the devices will display the variation A or B when you validate your choice.
+Once you have significant results for an experiment, you have the choice between keeping the variation A (original) or using a test variation (B,C,etc.). All the devices will display the selected variation when you validate your choice.
