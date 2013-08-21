@@ -25,7 +25,7 @@ Getting Started
 1. Create an account
 --------------------
 
-If you do not have an account yet, register on the dashboard_. The dashboard is your tool to configure your experiment variation.
+If you do not have an account yet, register on the dashboard_. The dashboard is your tool to configure your experiments.
 
 .. _dashboard: http://beta.arise.io/
 
@@ -35,7 +35,7 @@ If you do not have an account yet, register on the dashboard_. The dashboard is 
 
 Click on "Create a new experiment" to create your first experiment.
 
-The current system supports only two variations for each experiment.
+Two variations are created by default: variation A (original) and variation B (test).
 
 Variation values
 +++++++++++++++++
@@ -50,7 +50,7 @@ Variation values will be transmitted to your app. You can experiment:
 * images
 
 You need to set different values for each variation. We will consider the variation A as the default variation (original).
-You will be able to create up to 8 variations. However, you will get more reliable and faster results by testing as few variations as possible.
+You will be able to create up to 8 variations. You can create a new variation by clicking on the blue '+' button. However, you will get more reliable and faster results by testing as few variations as possible.
 
 Distribution
 ++++++++++++

@@ -4,7 +4,7 @@
 Arise iOS SDK
 *****************
 
-This documentation will help you to install the Arise iOS client in your application.
+This document will help you to install the Arise iOS client in your application.
 
 Installation steps
 ==================
@@ -54,7 +54,7 @@ You have also to set a default value in case of no connection to the server. "Bu
 .. code-block:: obj-c
 
     [ABTest getVariation:@"Experiment1" defaultValue:@"Buy it now" data:^(NSString *value){
-        purchaseButton.title = value;
+        [_purchaseButton setTitle:value forState:UIControlStateNormal];
     }];
 
 Do not forget to import the Arise SDK in your header file:
@@ -108,7 +108,7 @@ Full code example
             
             // For example :
             // Change the title of the purchase button
-            purchaseButton.title = value;
+            [_purchaseButton setTitle:value forState:UIControlStateNormal];
         }];
     }
 
