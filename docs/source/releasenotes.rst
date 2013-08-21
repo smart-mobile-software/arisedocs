@@ -11,7 +11,7 @@ August 22th 2013
 Dashboard
 ----------
 
-* Adding support up to 7 variations per experiment (A/B/N testing)
+* Adding support up to 8 variations per experiment (A/B/N testing)
 * Stunning performances (no page reload)
 
 iOS
