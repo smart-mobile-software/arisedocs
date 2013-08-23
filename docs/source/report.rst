@@ -70,7 +70,7 @@ A screen is shown to the player when he has no more life (game over):
 **Variation A**:
 
 | Game over
-| Buy more life to continue
+| Buy more lives to continue
 | [ 1 life ]
 | [ 5 lives ]
 | [ 25 lives ] 

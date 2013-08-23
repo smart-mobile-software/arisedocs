@@ -30,7 +30,12 @@ If you do not have an account yet, register on the dashboard_. The dashboard is 
 .. _dashboard: http://beta.arise.io/
 
 
-2. Create and configure your variation
+2. Create a new app
+--------------------
+
+Enter an application name without any space. An application will contain a set of experiments. The application name should be entered without any space (this application name will be used later in your code).
+
+3. Create and configure your variation
 ---------------------------------------
 
 Click on "Create a new experiment" to create your first experiment.
@@ -57,12 +62,12 @@ Distribution
 
 You can set the distribution of your variations. The total of all the variations must always be 100%. You can for example set 70% on the variation A (original) and 30% on the variation B (test). Once your app is deployed, you will be able to view the conversion rate for each variation.
 
-3. Start your experiment
+5. Start your experiment
 ---------------------------
 
 Once you have configured your experiment, you will need to click on the "Start experiment" button. Once an experiment is started, experiment values are not allowed to be modified. You will also not be able to add or remove a variation. However, the distribution can still be modified. Requests from new devices will use the new distribution. Devices that have already an experiment assigned won't change.
 
-4. Install the Arise SDK in your app
+6. Install the Arise SDK in your app
 -------------------------------------
 
 We currently support iOS and Android. Please read the following documentation to install the Arise SDK in your app:
@@ -71,11 +76,11 @@ We currently support iOS and Android. Please read the following documentation to
 * :doc:`android`
 
 
-5. End your experiment
+7. End your experiment
 -----------------------
 
 Once you have significant results for an experiment, you have the choice between keeping the variation A (original) or using a test variation (B,C,etc.). All the devices will display the selected variation when you validate your choice.
 
-5. Analyse your report
+8. Analyse your report
 -----------------------
 * :doc:`report`
