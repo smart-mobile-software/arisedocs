@@ -34,7 +34,7 @@ In the onCreate function of your main activity, you need to initialize the frame
 
     // Initialize the arise library
     String authKey = "9c51b5e8f06ebd26728f29954365098f052c68c8";
-    String appName = "MyApp";
+    String appName = "AngryElephants";
     Arise.initialize(getApplicationContext(), authKey, appName);
 
 Replace the value of the key and the app name by your own key and your application name. You can find it on your dashboard.
@@ -98,7 +98,7 @@ Full code example
 
     		// Initialize the arise library
     		String authKey = "9c51b5e8f06ebd26728f29954365098f052c68c8";
-    		String appName = "MyApp";
+    		String appName = "AngryElephants";
     	   	Arise.initialize(getApplicationContext(), authKey, appName);
 
     		// Get and setup the variation

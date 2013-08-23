@@ -41,7 +41,7 @@ Add the following line under application:didFinishLaunchingWithOptions of your A
 
 .. code-block:: obj-c
 
-    [Arise initializeWithKey:@"9c51b5e8f06ebd26728f29954365098f052c68c8" appName:@"MyApp"];
+    [Arise initializeWithKey:@"9c51b5e8f06ebd26728f29954365098f052c68c8" appName:@"AngryElephants"];
 
 Replace the value of the key and the app name by your own key and your application name. You can find it on your dashboard.
 
