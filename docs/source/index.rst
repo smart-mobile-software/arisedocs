@@ -14,6 +14,7 @@ Contents:
    setup
    ios
    android
+   report
    releasenotes
 
 Indices and tables

@@ -75,3 +75,7 @@ We currently support iOS and Android. Please read the following documentation to
 -----------------------
 
 Once you have significant results for an experiment, you have the choice between keeping the variation A (original) or using a test variation (B,C,etc.). All the devices will display the selected variation when you validate your choice.
+
+5. Analyse your report
+-----------------------
+* :doc:`report`
