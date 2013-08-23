@@ -34,9 +34,10 @@ In the onCreate function of your main activity, you need to initialize the frame
 
     // Initialize the arise library
     String authKey = "9c51b5e8f06ebd26728f29954365098f052c68c8";
-    Arise.initialize(getApplicationContext(), authKey);
+    String appName = "MyApp";
+    Arise.initialize(getApplicationContext(), authKey, appName);
 
-Replace the value of authKey by your own key. You can find it at the top of your dashboard.
+Replace the value of the key and the app name by your own key and your application name. You can find it on your dashboard.
 
 4. Get the experiment value
 ---------------------------
@@ -97,7 +98,8 @@ Full code example
 
     		// Initialize the arise library
     		String authKey = "9c51b5e8f06ebd26728f29954365098f052c68c8";
-    		Arise.initialize(getApplicationContext(), authKey);
+    		String appName = "MyApp";
+    	   	Arise.initialize(getApplicationContext(), authKey, appName);
 
     		// Get and setup the variation
     		ABTest.getVariationWithListener("Experiment1", "Buy it now", new VariationListener() {
