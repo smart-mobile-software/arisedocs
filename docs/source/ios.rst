@@ -43,7 +43,7 @@ Add the following line under application:didFinishLaunchingWithOptions of your A
 
     [Arise initializeWithKey:@"9c51b5e8f06ebd26728f29954365098f052c68c8" appName:@"MyApp"];
 
-Replace the value of the key and app name by your own key and your application name. You can find it on your dashboard.
+Replace the value of the key and the app name by your own key and your application name. You can find it on your dashboard.
 
 4. Get the experiment value
 ---------------------------
