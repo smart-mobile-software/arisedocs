@@ -43,7 +43,7 @@ Add the following line under application:didFinishLaunchingWithOptions of your A
 
     [Arise initializeWithKey:@"9c51b5e8f06ebd26728f29954365098f052c68c8" appName:@"AngryElephants"];
 
-Replace the value of the key and the app name by your own key and your application name. You can find it on your dashboard.
+Replace the value of the key and the app name by your own key and your application name. You can find it on your dashboard. This function will trigger a asynchronous sync with the server (experiments values are retrieved and events are sent).
 
 4. Get the experiment value
 ---------------------------
@@ -64,6 +64,8 @@ Do not forget to import the Arise SDK in your header file:
     #import <Arise/Arise.h>
 
 The default value will only be printed if the application has never succeeded to connect to the server. We recommend to set the default value to the same value as your variation A value.
+
+We also recommend to call this function as late as possible in your app.
 
 5. Record events
 ----------------

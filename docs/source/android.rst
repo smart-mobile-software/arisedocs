@@ -37,10 +37,10 @@ In the onCreate function of your main activity, you need to initialize the frame
     String appName = "AngryElephants";
     Arise.initialize(getApplicationContext(), authKey, appName);
 
-Replace the value of the key and the app name by your own key and your application name. You can find it on your dashboard.
+Replace the value of the key and the app name by your own key and your application name. You can find it on your dashboard. This function will trigger a asynchronous sync with the server (experiments values are retrieved and events are sent).
 
 4. Get the experiment value
----------------------------
+----------------------------
 
 When you plan to run the experiment, you will need to call the getVariationWithListener with the experiment name (same as the one displayed in your dashboard) to get the experiment data.
 You have also to set a default value in case of no connection to the server. "Buy it now" is the default value in the following code snippet.
@@ -56,6 +56,8 @@ You have also to set a default value in case of no connection to the server. "Bu
     });
 
 The default value will only be printed if the application has never succeeded to connect to the server. We recommend to set the default value to the same value as your variation A value.
+
+We also recommend to call this function as late as possible in your app.
 
 5. Record events
 ----------------
