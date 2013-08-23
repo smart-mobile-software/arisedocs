@@ -4,6 +4,31 @@
 Release notes
 *****************
 
+
+Version 2.5
+==================
+August 27th 2013
+
+Dashboard
+----------
+
+* Adding support for multiple applications. Each application will be able to contain an unlimited number of experiments
+* Experiments collapsible status are now saved
+* One step registration
+* Migration of existing Arise version 1.0 users
+
+iOS
+----
+
+* Experiment values are now returned instantly if the system has not retrieved any values from the server. We had a 5 seconds waiting time on the previous version
+* Support for application names on initialization
+
+Android
+--------
+
+* Experiment values are now returned instantly if the system has not retrieved any values from the server. We had a 5 seconds waiting time on the previous version
+* Support for application names on initialization
+
 Version 2.4
 ==================
 August 22th 2013
