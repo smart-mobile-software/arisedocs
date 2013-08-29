@@ -86,7 +86,7 @@ A screen is shown to the player when he has no more life (game over):
 | One view event is recorded when the screen is displayed.
 | One conversion event is recorded **for each life** bought.
   
-In this example, the results means that a player who loose purchases in average 0.89 life with the variation A and 1.53 lives with the variation B.
+In this example, the results mean that a player purchases in average 0.89 life with the variation A and 1.53 lives with the variation B.
 The revenue is higher with the variation B than with the variation A!
 
 This is why in some cases we can have more conversion events than views! The goal here was to optimize the number of lives purchased.  

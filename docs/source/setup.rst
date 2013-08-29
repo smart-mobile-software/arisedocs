@@ -33,7 +33,7 @@ If you do not have an account yet, register on the dashboard_. The dashboard is 
 2. Create a new app
 --------------------
 
-Enter an application name without any space. An application will contain a set of experiments. The application name should be entered without any space (this application name will be used later in your code).
+Enter an application name without any space. An application will contain a set of experiments. The application name will be used later in your code.
 
 3. Create and configure your variation
 ---------------------------------------
@@ -65,7 +65,7 @@ You can set the distribution of your variations. The total of all the variations
 5. Start your experiment
 ---------------------------
 
-Once you have configured your experiment, you will need to click on the "Start experiment" button. Once an experiment is started, experiment values are not allowed to be modified. You will also not be able to add or remove a variation. However, the distribution can still be modified. Requests from new devices will use the new distribution. Devices that have already an experiment assigned won't change.
+Once you have configured your experiment, you will need to click on the "Start experiment" button. When an experiment is started, experiment values are not allowed to be modified. You will also not be able to add or remove a variation. However, the distribution can still be modified. Requests from new devices will use the new distribution. Devices that have already an experiment assigned won't change.
 
 6. Install the Arise SDK in your app
 -------------------------------------
