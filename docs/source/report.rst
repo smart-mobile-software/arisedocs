@@ -67,22 +67,16 @@ Seems like a bug in our system? No, it's a feature! This experiment could have b
 
 A screen is shown to the player when he has no more life (game over):
 
-**Variation A**:
++------------------------------------+-----------------------------------------------------------+
+|     **Variation A**                |     **Variation B**                                       |
++------------------------------------+-----------------------------------------------------------+
+| | Game over                        | | You were soooooo closed to the final boss!              |
+| | Buy more lives to continue       | | Wanna refill? Lives are even better than energy drinks. |
+| | [ 1 life ]                       | | [ 1 life ]                                              |
+| | [ 5 lives ]                      | | [ 5 lives ]                                             |
+| | [ 25 lives ]                     | | [ 25 lives ]                                            |
++------------------------------------+-----------------------------------------------------------+
 
-| Game over
-| Buy more lives to continue
-| [ 1 life ]
-| [ 5 lives ]
-| [ 25 lives ] 
-  
-**Variation B**:  
-  
-| You were soooooo closed to the final boss!
-| Wanna refill? Lives are even better than energy drinks.
-| [ 1 life ]
-| [ 5 lives ]
-| [ 25 lives ] 
-  
 | One view event is recorded when the screen is displayed.
 | One conversion event is recorded **for each life** bought.
   

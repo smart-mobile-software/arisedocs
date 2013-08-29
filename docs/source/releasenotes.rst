@@ -4,6 +4,29 @@
 Release notes
 *****************
 
+Version 2.6
+==================
+August 30th 2013
+
+Dashboard
+----------
+
+* Adding support experiments tags. Mobile apps will the this tag to refer to the experiment instead of the experiment name. It means that you can run a new experiment without new values without resubmitting your app to the store.
+* Apps listed under the left menu
+* Other experiments are automatically collapsed when a new one is created
+* Notification of successes and errors
+* Fix issue with empty distribution value
+
+iOS
+----
+
+* Support for experiment tags
+* AFNetworking library renamed to avoid conflicts with an existing library
+
+Android
+--------
+
+* Support for experiment tags
 
 Version 2.5
 ==================
