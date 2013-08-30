@@ -15,6 +15,7 @@ Contents:
    ios
    android
    report
+   restart
    releasenotes
 
 Indices and tables

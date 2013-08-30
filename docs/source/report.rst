@@ -65,7 +65,7 @@ Example 2
 
 Seems like a bug in our system? No, it's a feature! This experiment could have been implemented in a very addictive game.
 
-A screen is shown to the player when he has no more life (game over):
+A game over screen is shown to the player when he has no more life:
 
 +------------------------------------+-----------------------------------------------------------+
 |     **Variation A**                |     **Variation B**                                       |
@@ -83,4 +83,7 @@ A screen is shown to the player when he has no more life (game over):
 In this example, the results mean that a player purchases in average 0.89 life with the variation A and 1.53 lives with the variation B.
 The revenue is higher with the variation B than with the variation A!
 
-This is why in some cases we can have more conversion events than views! The goal here was to optimize the number of lives purchased.  
+This is why in some cases we can have more conversion events than views! The goal here was to optimize the number of lives purchased.
+
+
+You might now want to :doc:`restart` with new values.

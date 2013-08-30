@@ -42,6 +42,11 @@ Click on "Create a new experiment" to create your first experiment.
 
 Two variations are created by default: variation A (original) and variation B (test).
 
+Tag
++++++++++++++++++
+
+The tag will be the identifier of your experiment in your iOS or Android code.
+
 Variation values
 +++++++++++++++++
 
@@ -84,3 +89,10 @@ Once you have significant results for an experiment, you have the choice between
 8. Analyse your report
 -----------------------
 * :doc:`report`
+
+
+9. Restart your experiment with new values
+-------------------------------------------
+
+* :doc:`restart`
+

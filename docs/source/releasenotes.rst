@@ -8,13 +8,13 @@ Version 2.6
 ==================
 August 30th 2013
 
+Backward compatible with iOS and Android Arise SDK version 2.5.
+
 Dashboard
 ----------
 
-* Adding support experiments tags. Mobile apps will the this tag to refer to the experiment instead of the experiment name. It means that you can run a new experiment without new values without resubmitting your app to the store.
-* Apps listed under the left menu
+* Adding support experiments tags. Mobile apps will the this tag to refer to the experiment instead of the experiment name. It means that you can run a new experiment with new values without resubmitting your app to the store.
 * Other experiments are automatically collapsed when a new one is created
-* Notification of successes and errors
 * Fix issue with empty distribution value
 
 iOS
@@ -27,6 +27,13 @@ Android
 --------
 
 * Support for experiment tags
+
+Migration notes from 2.5 to 2.6
+--------------------------------
+SDK 2.5 will still work with experiments names. To use experiment tags:
+
+1. Update your SDK
+2. Replace your experiments names with experiments tags names in your source code
 
 Version 2.5
 ==================

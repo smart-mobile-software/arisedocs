@@ -14,7 +14,7 @@ Installation steps
 
 First, download the `Arise SDK for iOS`_. Unzip it and drag it inside your project's Frameworks folder in XCode. Ensure that you select ‘Copy items into the destination group’s folder’ when the dialogue box appears.
 
-.. _`Arise SDK for iOS`: https://s3.amazonaws.com/ariseio/Arise-iOS-2.5.zip
+.. _`Arise SDK for iOS`: https://s3.amazonaws.com/ariseio/Arise-iOS-2.6.zip
 
 2. Add dependencies
 -------------------
@@ -48,12 +48,12 @@ Replace the value of the key and the app name by your own key and your applicati
 4. Get the experiment value
 ---------------------------
 
-You can request a variation value using the getVariation: method with the experiment name (same as the one displayed in your dashboard).
+You can request a variation value using the getVariation: method with the experiment tag name (same as the one displayed in your dashboard).
 You have also to set a default value in case of no connection to the server. "Buy it now" is the default value in the following code snippet.
 
 .. code-block:: obj-c
 
-    [ABTest getVariation:@"Experiment1" defaultValue:@"Buy it now" data:^(NSString *value){
+    [ABTest getVariation:@"ExpTag1" defaultValue:@"Buy it now" data:^(NSString *value){
         [_purchaseButton setTitle:value forState:UIControlStateNormal];
     }];
 
@@ -70,19 +70,19 @@ We also recommend to call this function as late as possible in your app.
 5. Record events
 ----------------
 
-Now that you have setup your application for testing, you will need to record views and conversion events. You need to provide the experiment name as a parameter to associate the events with an experiment.
+Now that you have setup your application for testing, you will need to record views and conversion events. You need to provide the experiment tag name as a parameter to associate the events with an experiment.
 
 Record a view:
 
 .. code-block:: obj-c
 
-	[ABTest recordView:@"Experiment1"];
+	[ABTest recordView:@"ExpTag1"];
 
 Record a conversion:
 
 .. code-block:: obj-c
 
-	[ABTest recordConversion:@"Experiment1"];
+	[ABTest recordConversion:@"ExpTag1"];
 
 Views and conversions events are stored on the device until an internet connection is available. Our framework does work properly even in case of no connectivity.
 
@@ -104,7 +104,7 @@ Full code example
         [super viewDidLoad];
 
         // Get and setup the variation
-        [ABTest getVariation:@"Experiment1" defaultValue:@"Buy it now" data:^(NSString *value){
+        [ABTest getVariation:@"ExpTag1" defaultValue:@"Buy it now" data:^(NSString *value){
             // Use the variation value to customize our application
             // ...
             
@@ -118,14 +118,14 @@ Full code example
     {
     	// the user is viewing the item purchase page
         // record a view event
-        [ABTest recordView:@"Experiment1"];
+        [ABTest recordView:@"ExpTag1"];
     }
 
     - (IBAction)onPurchase:(id)sender
     {
         // the user has bought the item
         // record a conversion event
-        [ABTest recordConversion:@"Experiment1"];
+        [ABTest recordConversion:@"ExpTag1"];
     }
 
     - (void)didReceiveMemoryWarning

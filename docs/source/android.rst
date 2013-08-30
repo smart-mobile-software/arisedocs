@@ -14,7 +14,7 @@ Installation steps
 
 First, download the `Arise library jar file`_ and drag it inside your project's /libs/ folder.
 
-.. _`Arise library jar file`: https://s3.amazonaws.com/ariseio/Arise-Android-2.5.jar
+.. _`Arise library jar file`: https://s3.amazonaws.com/ariseio/Arise-Android-2.6.jar
 
 2. Add permissions
 -------------------
@@ -42,13 +42,13 @@ Replace the value of the key and the app name by your own key and your applicati
 4. Get the experiment value
 ----------------------------
 
-When you plan to run the experiment, you will need to call the getVariationWithListener with the experiment name (same as the one displayed in your dashboard) to get the experiment data.
+When you plan to run the experiment, you will need to call the getVariationWithListener with the experiment tag name (same as the one displayed in your dashboard) to get the experiment data.
 You have also to set a default value in case of no connection to the server. "Buy it now" is the default value in the following code snippet.
 
 .. code-block:: java
 
     // Get and setup the variation
-    ABTest.getVariationWithListener("Experiment1", "Buy it now", new VariationListener() {
+    ABTest.getVariationWithListener("ExpTag1", "Buy it now", new VariationListener() {
     	@Override
     	public void onVariationAvailable(String value) {
     		final String buyMessage = value;
@@ -62,19 +62,19 @@ We also recommend to call this function as late as possible in your app.
 5. Record events
 ----------------
 
-Now that you have setup your application for testing, you will need to record views and conversion events. You need to provide the experiment name as a parameter to associate the events with an experiment.
+Now that you have setup your application for testing, you will need to record views and conversion events. You need to provide the experiment tag name as a parameter to associate the events with an experiment.
 
 Record a view:
 
 .. code-block:: java
 
-	ABTest.recordView("Experiment1");
+	ABTest.recordView("ExpTag1");
 
 Record a conversion:
 
 .. code-block:: java
 
-	ABTest.recordConversion("Experiment1");
+	ABTest.recordConversion("ExpTag1");
 
 Views and conversions events are stored on the device until an internet connection is available. Our framework does work properly even in case of no connectivity.
 
@@ -104,7 +104,7 @@ Full code example
     	   	Arise.initialize(getApplicationContext(), authKey, appName);
 
     		// Get and setup the variation
-    		ABTest.getVariationWithListener("Experiment1", "Buy it now", new VariationListener() {
+    		ABTest.getVariationWithListener("ExpTag1", "Buy it now", new VariationListener() {
     			@Override
     			public void onVariationAvailable(String value) {
     				// Change the button label
@@ -120,13 +120,13 @@ Full code example
     	private void onLoadPurchasePage(){
     		// the user is viewing the item purchase page
     		// record a view event
-    		ABTest.recordView("Experiment1");
+    		ABTest.recordView("ExpTag1");
     	}
 
     	private void onPurchaseCompleted(){
     		// the user has bought the item
     		// record a conversion event
-    		ABTest.recordConversion("Experiment1");
+    		ABTest.recordConversion("ExpTag1");
     	}
     }
 
