@@ -14,6 +14,7 @@ Contents:
    setup
    ios
    android
+   phonegap
    report
    restart
    releasenotes

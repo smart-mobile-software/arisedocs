@@ -4,6 +4,14 @@
 Release notes
 *****************
 
+Version 2.6.1
+==================
+
+Html5
+------
+
+* Added compatibility with PhoneGap 3.0.0 for Android.
+
 Version 2.6
 ==================
 August 30th 2013
