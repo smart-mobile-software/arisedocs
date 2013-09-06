@@ -19,6 +19,7 @@ At the root of your project, run:
     phonegap local plugin add https://github.com/poiuytrez/ArisePhoneGap.git
 
 The plugin will be automatically downloaded and installed in your application.
+On iOS project you need to add the Arise.framework into your project's Frameworks folder in XCode. You can find it in ArisePhoneGap/libs/ios.
 
 2. Initialize the framework
 ---------------------------
@@ -172,4 +173,4 @@ Full code example
 Notes
 =====
 
-The Arise PhoneGap SDK supports PhoneGap 3.X on Android.
+The Arise PhoneGap SDK supports PhoneGap 3.X on Android and iOS.
