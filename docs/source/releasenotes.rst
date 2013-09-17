@@ -4,8 +4,18 @@
 Release notes
 *****************
 
+Version 2.6.2
+==================
+September 17th 2013
+
+Html5
+------
+
+* Added compatibility with PhoneGap 3.0.0 for iOS.
+
 Version 2.6.1
 ==================
+September 4th 2013
 
 Html5
 ------

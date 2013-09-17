@@ -1,5 +1,5 @@
 .. meta::
-   :description: Android A/B testing client setup
+   :description: Phonegap A/B testing client setup
 
 Arise PhoneGap SDK
 **********************
@@ -19,7 +19,7 @@ At the root of your project, run:
     phonegap local plugin add https://github.com/poiuytrez/ArisePhoneGap.git
 
 The plugin will be automatically downloaded and installed in your application.
-On iOS project you need to add the Arise.framework into your project's Frameworks folder in XCode. You can find it in ArisePhoneGap/libs/ios.
+On an iOS project, you need to drag the ArisePhoneGap/libs/ios/Arise.framework folder inside your project’s Frameworks folder in XCode. Ensure that you select ‘Copy items into the destination group’s folder’ when the dialogue box appears.
 
 2. Initialize the framework
 ---------------------------
