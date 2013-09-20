@@ -34,7 +34,7 @@ You need to initialize the framework in the deviceReady function of your applica
     // arise.initialize(success, error, authKey, appName);
     arise.initialize(
         function(){ console.log("successfully initialized"); },
-        function(error){ console.log("an error occured:" + error); },
+        function(error){ console.log("an error occurred:" + error); },
         authKey,
         appName
     );
@@ -56,7 +56,7 @@ You have also to set a default value in case of no connection to the server. "Bu
             console.log(value);
         },
         function(error){
-            console.log("an error occured:" + error);
+            console.log("an error occurred:" + error);
         },
         "ExpTag1",
         "MyDefaultValue"
@@ -78,7 +78,7 @@ Record a view:
 	// arise.recordView(success, error, experimentTag);
 	arise.recordView(
 	    function(){ console.log("success")},
-	    function(error){ console.log("an error occured:" + error) },
+	    function(error){ console.log("an error occurred:" + error) },
 	    "ExpTag1"
 	);
 
@@ -89,7 +89,7 @@ Record a conversion:
     // arise.recordConversion(success, error, experimentTag);
     arise.recordConversion(
         function(){ console.log("success")},
-        function(error){ console.log("an error occured:" + error) },
+        function(error){ console.log("an error occurred:" + error) },
         "ExpTag1"
     );
 
@@ -113,7 +113,7 @@ Full code example
                 // arise.initialize(success, error, authKey, appName);
                 arise.initialize(
                         function(){ console.log("successfully initialized"); },
-                        function(error){ console.log("an error occured:" + error); },
+                        function(error){ console.log("an error occurred:" + error); },
                         authKey,
                         appName
                 );
@@ -128,7 +128,7 @@ Full code example
                             alert(value);
                         },
                         function(error){
-                            console.log("an error occured:" + error);
+                            console.log("an error occurred:" + error);
                         },
                         "ExpTag1",
                         "MyDefaultValue"
@@ -140,7 +140,7 @@ Full code example
                 // arise.recordView(success, error, experimentTag);
                 arise.recordView(
                         function(){ console.log("success")},
-                        function(error){ console.log("an error occured:" + error) },
+                        function(error){ console.log("an error occurred:" + error) },
                         "ExpTag1"
                 );
             }
@@ -150,7 +150,7 @@ Full code example
                 // arise.recordConversion(success, error, experimentTag);
                 arise.recordConversion(
                         function(){ console.log("success")},
-                        function(error){ console.log("an error occured:" + error) },
+                        function(error){ console.log("an error occurred:" + error) },
                         "ExpTag1"
                 );
             }
