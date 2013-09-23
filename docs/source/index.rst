@@ -11,6 +11,8 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+..
+
    setup
    ios
    android
@@ -18,6 +20,7 @@ Contents:
    report
    restart
    releasenotes
+
 
 Indices and tables
 ==================
