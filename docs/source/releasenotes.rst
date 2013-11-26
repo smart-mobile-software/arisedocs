@@ -4,6 +4,16 @@
 Release notes
 *****************
 
+Version 2.6.3
+==================
+November 26th 2013
+
+iOS
+------
+
+* Events ignored when recorded to quickly bug fix
+
+
 Version 2.6.2
 ==================
 September 17th 2013
