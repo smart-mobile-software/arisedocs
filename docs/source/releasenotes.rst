@@ -17,6 +17,7 @@ Android
 ------
 
 * Flurry Analytics integration
+* Potential conflict with external loopj library removed
 
 
 Version 2.6.3
