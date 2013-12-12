@@ -4,6 +4,21 @@
 Release notes
 *****************
 
+Version 2.7
+==================
+December 5th 2013
+
+iOS
+------
+
+* Flurry Analytics integration
+
+Android
+------
+
+* Flurry Analytics integration
+
+
 Version 2.6.3
 ==================
 November 26th 2013

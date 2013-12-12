@@ -17,6 +17,7 @@ Contents:
    phonegap
    report
    restart
+   flurry
    releasenotes
 
 
