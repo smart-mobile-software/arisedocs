@@ -18,6 +18,7 @@ Contents:
    report
    restart
    flurry
+   segmentation
    releasenotes
 
 

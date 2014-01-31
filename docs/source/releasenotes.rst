@@ -4,6 +4,21 @@
 Release notes
 *****************
 
+Version 2.8
+==================
+January 31th 2014
+
+iOS
+------
+
+* Segmentation support
+
+Android
+------
+
+* Segmentation support
+
+
 Version 2.7
 ==================
 December 5th 2013
